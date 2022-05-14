@@ -26,10 +26,10 @@
       "@demo/shared": [
         "tools/demo/index.ts"
       ],
-      "@bancha/*": [
+      "@sfamc/*": [
         "packages/*"
       ],
-      "@bancha/nativescript-microsoft-appcenter": [
+      "@sfamc/nativescript-microsoft-appcenter": [
         "packages/nativescript-microsoft-appcenter/index.d.ts"
       ]
     }

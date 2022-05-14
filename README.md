@@ -1,11 +1,11 @@
-# @bancha/\* plugins
+# @sfamc/\* plugins
 
 ```
 npm run setup
 npm start
 ```
 
-- [@bancha/nativescript-microsoft-appcenter](packages/nativescript-microsoft-appcenter/README.md)
+- [@sfamc/nativescript-microsoft-appcenter](packages/nativescript-microsoft-appcenter/README.md)
 
 # How to use?
 

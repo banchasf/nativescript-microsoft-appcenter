@@ -1,7 +1,7 @@
-# @bancha/nativescript-microsoft-appcenter
+# @sfamc/nativescript-microsoft-appcenter
 
 ```javascript
-ns plugin add @bancha/nativescript-microsoft-appcenter
+ns plugin add @sfamc/nativescript-microsoft-appcenter
 ```
 
 ## Usage

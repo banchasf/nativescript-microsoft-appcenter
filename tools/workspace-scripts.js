@@ -57,17 +57,17 @@ module.exports = {
       },
     },
     '⚙️': {
-      script: `npx cowsay "@bancha/* packages will keep your ⚙️ cranking"`,
-      description: '_____________  @bancha/*  _____________',
+      script: `npx cowsay "@sfamc/* packages will keep your ⚙️ cranking"`,
+      description: '_____________  @sfamc/*  _____________',
     },
     // packages
     // build output is always in dist/packages
-    '@bancha': {
-      // @bancha/nativescript-microsoft-appcenter
+    '@sfamc': {
+      // @sfamc/nativescript-microsoft-appcenter
 			'nativescript-microsoft-appcenter': {
 				build: {
 					script: 'nx run nativescript-microsoft-appcenter:build.all',
-					description: '@bancha/nativescript-microsoft-appcenter: Build',
+					description: '@sfamc/nativescript-microsoft-appcenter: Build',
 				},
 			},
 			'build-all': {
@@ -82,10 +82,10 @@ module.exports = {
     focus: {
       'nativescript-microsoft-appcenter': {
 				script: 'nx run nativescript-microsoft-appcenter:focus',
-				description: 'Focus on @bancha/nativescript-microsoft-appcenter',
+				description: 'Focus on @sfamc/nativescript-microsoft-appcenter',
 			},
 			reset: {
-        script: 'nx g @bancha/plugin-tools:focus-packages',
+        script: 'nx g @sfamc/plugin-tools:focus-packages',
         description: 'Reset Focus',
       },
     },

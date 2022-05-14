@@ -2,7 +2,7 @@ import { runNativeScriptAngularApp, platformNativeScript } from '@nativescript/a
 import { AppModule } from './app.module';
 
 import { Application } from '@nativescript/core';
-import {AppCenter, AppCenterSettings} from "@bancha/nativescript-microsoft-appcenter";
+import {AppCenter, AppCenterSettings} from "@sfamc/nativescript-microsoft-appcenter";
 if (Application.ios) {
   let appCenterSettings: AppCenterSettings = {
     appSecret: '3f3e92d4-0884-4e7d-b966-2aeb0fb13f51',
