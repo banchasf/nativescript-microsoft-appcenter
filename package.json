@@ -1,6 +1,6 @@
 {
   "name": "plugins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "postinstall": "husky install && npx ts-patch install",
@@ -45,5 +45,8 @@
     "**/*.{js,ts,scss,json,html}": [
       "npx prettier --write"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

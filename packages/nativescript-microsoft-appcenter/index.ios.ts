@@ -31,29 +31,29 @@ export class AppCenter {
   }
 
   public getInstallId(): string {
-    return MSACAppCenter.installId();
+    return MSACAppCenter.installId;
   }
 
   public isEnabled(): boolean {
-    return MSACAppCenter.isEnabled();
+    return MSACAppCenter.enabled;
   }
 
   public disable(): void {
-    MSACAppCenter.setEnabled(false);
+    MSACAppCenter.enabled = false;
   }
 }
 
 export class AppCenterAnalytics {
   public disable(): void {
-    MSACAnalytics.setEnabled(false);
+    MSACAnalytics.enabled = false;
   }
 
   public enable(): void {
-    MSACAnalytics.setEnabled(true);
+    MSACAnalytics.enabled = true;
   }
 
   public isEnabled(): boolean {
-    return MSACAnalytics.isEnabled();
+    return MSACAnalytics.enabled;
   }
 
   public trackEvent(eventName: string, properties?: TrackProperties[]): void {
@@ -74,15 +74,15 @@ export class AppCenterAnalytics {
 export class AppCenterCrashes {
 
   public disable(): void {
-    MSACCrashes.setEnabled(false);
+    MSACCrashes.enabled = false;
   }
 
   public enable(): void {
-    MSACCrashes.setEnabled(true);
+    MSACCrashes.enabled = true;
   }
 
   public isEnabled(): boolean {
-    return MSACCrashes.isEnabled();
+    return MSACCrashes.enabled;
   }
 
   public hasCrashedInLastSession(): boolean {
@@ -97,15 +97,15 @@ export class AppCenterCrashes {
 export class AppCenterDistribute {
 
   public disable(): void {
-    MSACDistribute.setEnabled(false);
+    MSACDistribute.enabled = false;
   }
 
   public enable(): void {
-    MSACDistribute.setEnabled(true);
+    MSACDistribute.enabled = true;
   }
 
   public isEnabled(): boolean {
-    return MSACDistribute.isEnabled();
+    return MSACDistribute.enabled;
   }
 }
 
