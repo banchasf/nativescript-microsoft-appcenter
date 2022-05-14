@@ -1,0 +1,72 @@
+{
+  "root": "packages/nativescript-microsoft-appcenter",
+  "projectType": "library",
+  "sourceRoot": "packages/nativescript-microsoft-appcenter",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "outputPath": "dist/packages/nativescript-microsoft-appcenter",
+        "tsConfig": "packages/nativescript-microsoft-appcenter/tsconfig.json",
+        "packageJson": "packages/nativescript-microsoft-appcenter/package.json",
+        "main": "packages/nativescript-microsoft-appcenter/index.d.ts",
+        "assets": [
+          "packages/nativescript-microsoft-appcenter/*.md",
+          "packages/nativescript-microsoft-appcenter/index.d.ts",
+          "LICENSE",
+          {
+            "glob": "**/*",
+            "input": "packages/nativescript-microsoft-appcenter/platforms/",
+            "output": "./platforms/"
+          }
+        ],
+        "dependsOn": [
+          {
+            "target": "build.all",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    },
+    "build.all": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "node tools/scripts/build-finish.ts nativescript-microsoft-appcenter"
+        ],
+        "parallel": false
+      },
+      "outputs": [
+        "dist/packages/nativescript-microsoft-appcenter"
+      ],
+      "dependsOn": [
+        {
+          "target": "build.all",
+          "projects": "dependencies"
+        },
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ]
+    },
+    "focus": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx g @nativescript/plugin-tools:focus-packages nativescript-microsoft-appcenter"
+        ],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/nativescript-microsoft-appcenter/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

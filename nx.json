@@ -1,5 +1,5 @@
 {
-  "npmScope": "nativescript",
+  "npmScope": "bancha",
   "affected": {
     "defaultBase": "master"
   },
@@ -21,8 +21,16 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "build.all", "lint", "test", "e2e"],
-        "runtimeCacheInputs": ["node -v"]
+        "cacheableOperations": [
+          "build",
+          "build.all",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "runtimeCacheInputs": [
+          "node -v"
+        ]
       }
     }
   },

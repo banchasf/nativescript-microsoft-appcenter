@@ -1,7 +1,8 @@
 {
   "main": "./src/main.ts",
   "dependencies": {
-    "@nativescript/core": "file:../../node_modules/@nativescript/core"
+    "@nativescript/core": "file:../../node_modules/@nativescript/core",
+    "@bancha/nativescript-microsoft-appcenter": "file:../../dist/packages/nativescript-microsoft-appcenter"
   },
   "devDependencies": {
     "@nativescript/android": "~8.2.0",

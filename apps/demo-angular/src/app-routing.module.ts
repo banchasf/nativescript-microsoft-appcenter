@@ -6,7 +6,8 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
    { path: '', redirectTo: '/home', pathMatch: 'full' },
-   { path: 'home', component: HomeComponent }
+   { path: 'home', component: HomeComponent },
+	{ path: 'nativescript-microsoft-appcenter', loadChildren: () => import('./plugin-demos/nativescript-microsoft-appcenter.module').then(m => m.NativescriptMicrosoftAppcenterModule) }
 ];
 
 @NgModule({
