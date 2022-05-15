@@ -48,12 +48,8 @@ export class AppCenterAnalytics {
     MSACAnalytics.enabled = false;
   }
 
-  public enable(): void {
-    MSACAnalytics.enabled = true;
-  }
-
   public isEnabled(): boolean {
-    return MSACAnalytics.enabled;
+    return MSACAnalytics.isEnabled();
   }
 
   public trackEvent(eventName: string, properties?: TrackProperties[]): void {
@@ -115,12 +111,10 @@ export class AppCenterDelegate extends UIResponder implements UIApplicationDeleg
   public static ObjCProtocols = [UIApplicationDelegate];
 
   public static setup(settings: AppCenterSettings): void {
-    console.log('setup 1')
     this.settings = settings;
   }
 
   applicationDidFinishLaunchingWithOptions(application: UIApplication, launchOptions: NSDictionary<any, any>): boolean {
-    console.log('applicationDidFinishLaunchingWithOptions 1')
     const services = NSMutableArray.alloc().init();
 
     if (AppCenterDelegate.settings.analytics) {
@@ -136,7 +130,6 @@ export class AppCenterDelegate extends UIResponder implements UIApplicationDeleg
     }
 
     MSACAppCenter.startWithServices(AppCenterDelegate.settings.appSecret, services);
-    console.log('applicationDidFinishLaunchingWithOptions 2')
     return true;
   }
 }

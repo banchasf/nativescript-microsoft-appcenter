@@ -1,2 +1,2 @@
-pod 'AppCenter', '~> 4.4.2'
-pod 'AppCenter/Distribute', '~> 4.4.2'
+pod 'AppCenter', '~> 4.3.0'
+pod 'AppCenter/Distribute', '~> 4.3.0'
